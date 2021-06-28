@@ -1,17 +1,15 @@
+use rocket_dyn_templates::Template;
+
 #[macro_use] extern crate rocket;
 
-#[get("/")]
-fn index() -> &'static str {
-    "Hello, world!"
+mod index;
+
+#[get("/")] //Index of Website
+fn ind() -> Template {
+    Template::render("layout", "hi")
 }
 
-#[rocket::main]
-async fn main() -> Result<(), rocket::Error> {
-    rocket::build()
-        .mount("/", routes![index])
-        .launch()
-        .await;
-
-        Ok(())
-        
+#[launch]
+fn rocket() -> _ {
+    rocket::build().attach(Template::fairing())
 }
