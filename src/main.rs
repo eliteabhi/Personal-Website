@@ -15,8 +15,13 @@ use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
 // use rocket::response::Redirect;
 
+//Helper Functions
+fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
+
+
+// Launch website
 #[launch]
-fn rocket() -> _ { // Launch website
+fn rocket() -> _ {
 
     rocket::build()
                 //Fairings
@@ -32,25 +37,11 @@ fn rocket() -> _ { // Launch website
 }
 
 
-
 // Global CSS
 #[get("/css/index.css")]
-fn css() -> (ContentType, fs::File) {
-
-    let file = fs::File::open("css/index.css").expect("Failed to open favicon");
-
-    (ContentType::CSS, file)
-
-}
-
+fn css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/index.css".to_string())) }
 
 
 // Default Favicon
 #[get("/images/favicon.ico")]
-fn favicon() -> (ContentType, fs::File) {
-
-    let file = fs::File::open("images/favicon.ico").expect("Failed to open favicon");
-
-    (ContentType::Icon, file)
-
-}
+fn favicon() -> (ContentType, fs::File) { return (ContentType::Icon, read_file("images/favicon.ico".to_string())) }
