@@ -25,8 +25,9 @@ struct IndexContext {
     date: &'static str,
     name: &'static str,
 
+    title: &'static str,
     parent: &'static str
-    
+
 }
 
 #[derive(serde::Serialize)]
@@ -35,6 +36,7 @@ struct ErrorContext {
     error_code: &'static str,
     page: String,
 
+    title: &'static str,
     parent: &'static str
 
 }
@@ -60,6 +62,7 @@ fn index() -> Template {
         date: "1/21/2001",
         name: "Abhi Rangarajan",
 
+        title: "index",
         parent: "layout"
     })
     
@@ -76,6 +79,7 @@ fn not_found(req: &Request) -> Template {
         error_code: "404",
         page: req.uri().to_string(),
 
+        title: "404",
         parent: "layout"
     })
 
