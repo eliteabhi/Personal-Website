@@ -37,6 +37,8 @@ struct ErrorContext {
 
 }
 
+
+
 // CSS
 #[get("/css/index.css")]
 fn css() -> (ContentType, &'static str) {
