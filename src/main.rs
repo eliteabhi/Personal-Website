@@ -2,13 +2,13 @@
 extern crate rocket_dyn_templates;
 extern crate image;
 
-mod pages {
+mod pages_rust {
     pub mod index;
     pub mod about;
     pub mod error;
 }
 
-use pages::*;
+use pages_rust::*;
 use std::fs;
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
