@@ -3,7 +3,6 @@ extern crate rocket_dyn_templates;
 extern crate image;
 
 mod pages {
-    
     pub mod index;
     pub mod about;
     pub mod error;
