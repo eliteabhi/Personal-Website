@@ -1,6 +1,8 @@
 #[macro_use] extern crate rocket;
 extern crate rocket_dyn_templates;
+extern crate image;
 
+use std::fs;
 use rocket::Request;
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
@@ -17,7 +19,7 @@ fn rocket() -> _ { // Launch website
                 .register("/", catchers![not_found])
 
                 //Pages
-                .mount("/", routes![index, about, css])
+                .mount("/", routes![index, about, css, favicon])
 
 }
 
@@ -61,9 +63,23 @@ struct ErrorContext {
 
 // CSS
 #[get("/css/index.css")]
-fn css() -> (ContentType, &'static str) {
+fn css() -> (ContentType, fs::File) {
 
-    (ContentType::CSS, std::include_str!("../css/index.css"))
+    let file = fs::File::open("css/index.css").expect("Failed to open favicon");
+    
+    (ContentType::CSS, file)
+
+}
+
+
+
+// Favicon
+#[get("/images/favicon.ico")]
+fn favicon() -> (ContentType, fs::File) {
+
+    let file = fs::File::open("images/favicon.ico").expect("Failed to open favicon");
+
+    (ContentType::Icon, file)
 
 }
 
@@ -84,6 +100,7 @@ fn index() -> Template {
     
 }
 
+// About page
 #[get("/about")]
 fn about() -> Template {
 
