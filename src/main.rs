@@ -66,7 +66,7 @@ struct ErrorContext {
 fn css() -> (ContentType, fs::File) {
 
     let file = fs::File::open("css/index.css").expect("Failed to open favicon");
-    
+
     (ContentType::CSS, file)
 
 }
@@ -94,7 +94,7 @@ fn index() -> Template {
         date: "1/21/2001",
         name: "Abhi Rangarajan",
 
-        title: "index",
+        title: "Home",
         parent: "layout"
     })
     
@@ -109,7 +109,7 @@ fn about() -> Template {
         date: "1/21/2001",
         name: "Abhi Rangarajan",
 
-        title: "about",
+        title: "About",
         parent: "layout"
 
     })
