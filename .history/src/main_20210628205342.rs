@@ -2,6 +2,7 @@
 extern crate rocket_dyn_templates;
 
 use rocket_dyn_templates::Template;
+use std::fs;
 use rocket::http::ContentType;
 // use rocket::response::Redirect;
 
