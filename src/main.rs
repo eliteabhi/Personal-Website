@@ -15,9 +15,6 @@ use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
 // use rocket::response::Redirect;
 
-//Helper Functions
-fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
-
 
 // Launch website
 #[launch]
@@ -35,6 +32,10 @@ fn rocket() -> _ {
                 .mount("/about", routes![about::about]) // About page
 
 }
+
+
+//Helper Functions
+fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
 
 
 // Global CSS
