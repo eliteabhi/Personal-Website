@@ -25,8 +25,9 @@ fn rocket() -> _ { // Launch website
                 //Error catchers on Root
                 .register("/", catchers![error::not_found])
 
-                //Root Pages
-                .mount("/", routes![index::index, about::about, css, favicon])
+                //Pages
+                .mount("/", routes![index::index, css, favicon]) //Global (index)
+                .mount("/about", routes![about::about]) // About page
 
 }
 

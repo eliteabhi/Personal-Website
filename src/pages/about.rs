@@ -11,7 +11,7 @@ pub struct AboutContext {
 
 }
 
-#[get("/about")]
+#[get("/")]
 pub fn about() -> Template {
 
     Template::render("pages/about", &AboutContext {
