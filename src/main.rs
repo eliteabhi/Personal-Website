@@ -32,7 +32,7 @@ fn rocket() -> _ { // Launch website
 
 
 
-// CSS
+// Global CSS
 #[get("/css/index.css")]
 fn css() -> (ContentType, fs::File) {
 
@@ -44,7 +44,7 @@ fn css() -> (ContentType, fs::File) {
 
 
 
-// Favicon
+// Default Favicon
 #[get("/images/favicon.ico")]
 fn favicon() -> (ContentType, fs::File) {
 
