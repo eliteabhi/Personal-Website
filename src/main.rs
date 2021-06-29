@@ -7,8 +7,7 @@ use rocket::response::Redirect;
 #[launch]
 fn rocket() -> _ { //Launch website
 
-    rocket::build().attach(Template::fairing())
-
+    rocket::build().attach(Template::fairing()).mount("/", routes![index])
 }
 
 //Structs/Contexts
