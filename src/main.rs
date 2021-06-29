@@ -10,9 +10,14 @@ use rocket::http::ContentType;
 fn rocket() -> _ { // Launch website
 
     rocket::build()
+                //Fairings
                 .attach(Template::fairing())
+
+                //Error catchers
                 .register("/", catchers![not_found])
-                .mount("/", routes![index, css])
+
+                //Pages
+                .mount("/", routes![index, about, css])
 
 }
 
@@ -21,6 +26,17 @@ fn rocket() -> _ { // Launch website
 // Structs/Contexts
 #[derive(serde::Serialize)]
 struct IndexContext {
+
+    date: &'static str,
+    name: &'static str,
+
+    title: &'static str,
+    parent: &'static str
+
+}
+
+#[derive(serde::Serialize)]
+struct AboutContext {
 
     date: &'static str,
     name: &'static str,
@@ -57,7 +73,7 @@ fn css() -> (ContentType, &'static str) {
 #[get("/")]
 fn index() -> Template {
 
-    Template::render("index", &IndexContext {
+    Template::render("pages/index", &IndexContext {
 
         date: "1/21/2001",
         name: "Abhi Rangarajan",
@@ -68,13 +84,28 @@ fn index() -> Template {
     
 }
 
+#[get("/about")]
+fn about() -> Template {
+
+    Template::render("pages/about", &AboutContext {
+
+        date: "1/21/2001",
+        name: "Abhi Rangarajan",
+
+        title: "about",
+        parent: "layout"
+
+    })
+
+}
+
 
 
 // Error handling
 #[catch(404)]
 fn not_found(req: &Request) -> Template {
 
-    Template::render("error", &ErrorContext {
+    Template::render("pages/error", &ErrorContext {
 
         error_code: "404",
         page: req.uri().to_string(),

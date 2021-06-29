@@ -1,12 +1,16 @@
 <!doctype html>
 <html>
-  <head>
-    <link rel="stylesheet" type="text/css" href="css/index.css">
-    <title>Abhi Rangarajan - {{title}}</title>
-  </head>
-  <body>
-  {{> header}}
-  {{~> page}}
-  {{> footer}}
-  </body>
+    <head>
+        <link rel="stylesheet" type="text/css" href="css/index.css">
+        <title>Abhi Rangarajan - {{title}}</title>
+    </head>
+    <body>
+        {{> header}}
+            <div id="wrapper">
+                <div class="page-content">
+                    {{~> page}}
+                </div>
+            </div>
+        {{> footer}}
+    </body>
 </html>
