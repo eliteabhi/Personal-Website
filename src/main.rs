@@ -1,4 +1,5 @@
 #[macro_use] extern crate rocket;
+extern crate rocket_dyn_templates;
 
 use rocket_dyn_templates::Template;
 use rocket::response::Redirect;
@@ -6,15 +7,13 @@ use rocket::response::Redirect;
 #[launch]
 fn rocket() -> _ { //Launch website
 
-    rocket::build().attach(Template::fairing()).mount("/", routes![index])
+    rocket::build().attach(Template::fairing())
 
 }
 
 //Structs/Contexts
-
 #[derive(serde::Serialize)]
 struct IndexContext {
-
     date: &'static str,
     name: &'static str,
 
@@ -25,7 +24,7 @@ struct IndexContext {
 #[get("/")]
 fn index() -> Template {
 
-    Template::render("index", &IndexContext{
+    Template::render("layout", &IndexContext {
 
         date: "1/21/2001",
         name: "Abhi Rangarajan",
