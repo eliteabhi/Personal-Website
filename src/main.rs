@@ -21,6 +21,7 @@ fn rocket() -> _ { // Launch website
 // Structs/Contexts
 #[derive(serde::Serialize)]
 struct IndexContext {
+    
     date: &'static str,
     name: &'static str,
 
