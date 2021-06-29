@@ -2,7 +2,7 @@
 extern crate rocket_dyn_templates;
 
 use rocket_dyn_templates::Template;
-use rocket::response::Redirect;
+// use rocket::response::Redirect;
 
 #[launch]
 fn rocket() -> _ { //Launch website
