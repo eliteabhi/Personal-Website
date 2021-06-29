@@ -2,7 +2,7 @@
 extern crate rocket_dyn_templates;
 extern crate image;
 
-mod Pages {
+mod pages {
     
     pub mod index;
     pub mod about;
@@ -11,7 +11,6 @@ mod Pages {
 
 use Pages::*;
 use std::fs;
-use rocket::Request;
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
 // use rocket::response::Redirect;
