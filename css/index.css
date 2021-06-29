@@ -1,13 +1,67 @@
+/* 
+#1A1A2E
+#16213E
+#0F3460
+#E94560 
+*/
+
+/* Classes */
+
+.section-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content:center
+}
+
+.page-content {
+    max-width:800px
+}
+
+p.footer {
+
+    padding-top: 5px;
+
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* Ids */
 #index-body {
 
-    color: white;
+    color: #E94560;
     text-align: left;
     font-size: 12px;
 
 }
 
+
+#wrapper {
+    padding: 40px 0;
+    margin: 0 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex-grow:1
+}
+
+
+#footer {
+
+    text-align: center;
+    border-color: #E94560;
+    border-top: 1px solid;
+
+}
+
+/* -------------------------------------------------------------------------------- */
+
+/* Generics */
+
 body {
 
-    background-color: #20272F;
+    color: #E94560;
+    text-align: left;
+    font-size: 12px;
+    background-color: #1A1A2E;
 
 }
