@@ -1,4 +1,7 @@
 {% extends "layout" %}
+
+{% block header %}{% endblock header %}
+
 {% block page %} 
 {{ super() }} 
 
@@ -12,3 +15,5 @@
 </div>
 
 {% endblock page %}
+
+{% block footer %}{% endblock footer %}
