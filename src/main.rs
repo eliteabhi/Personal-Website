@@ -38,10 +38,10 @@ fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect
 
 
 // Global CSS
-#[get("/css/index.css")]
-fn css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/index.css".to_string())) }
+#[get("/css/global.css")]
+fn css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/global.css".to_string())) }
 
 
 // Default Favicon
 #[get("/images/favicon.ico")]
-fn favicon() -> (ContentType, fs::File) { return (ContentType::Icon, read_file("images/favicon.ico".to_string())) }
+fn favicon() -> (ContentType, fs::File) { return (ContentType::Icon, read_file("src/images/favicon.ico".to_string())) }
