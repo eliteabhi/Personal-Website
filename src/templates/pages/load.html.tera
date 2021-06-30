@@ -1,0 +1,14 @@
+{% extends "layout" %}
+{% block page %} 
+{{ super() }} 
+
+<link rel="stylesheet" type="text/css" href="css/pages/load.css">
+<div class="section-wrapper">
+    <section id="load-body">
+        <h1>Oh no!! you hit a {{test_code}}!</h1>
+        <h3>Please try again another time!</h3>
+        <small>Either I didn't impliment the {{page}} page yet or I messed up some of my code</small>
+    </section>
+</div>
+
+{% endblock page %}

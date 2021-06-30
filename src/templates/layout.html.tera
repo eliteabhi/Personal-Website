@@ -8,7 +8,7 @@
     <body id="full-body">
         {% block header %}
         <nav>
-            <a href="/">Home</a> | <a href="/about">About</a>
+            <a href="/">Home</a> | <a href="/about">About</a> | <a href="/loading...">load</a>
         </nav>
         {% endblock header %}
             <div id="wrapper">

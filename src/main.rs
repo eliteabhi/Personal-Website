@@ -29,13 +29,15 @@ fn rocket() -> _ {
 
                 //Pages
                 .mount("/", routes![index::index, global_css, error::error_css, index::index_css, about::about_css, load::load_css, favicon]) //Global
+
+                .mount("/loading...", routes![load::load, global_css, load::load_css, favicon]) //Initial loading page
                 .mount("/about", routes![about::about, global_css, about::about_css, favicon]) // About page
 
 }
 
 
 //Helper Functions
-pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
+pub fn read_file(path: String) -> fs::File { return fs::File::open(path).expect("Failed to open file") }
 
 
 // Global CSS
