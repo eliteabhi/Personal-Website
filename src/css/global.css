@@ -26,7 +26,7 @@ p.footer {
 /* -------------------------------------------------------------------------------- */
 
 /* Ids */
-#index-body {
+#global-body {
 
     color: #E94560;
     text-align: left;
@@ -59,9 +59,9 @@ p.footer {
 
 body {
 
-    color: #E94560;
+    color: #e94560a6;
     text-align: left;
     font-size: 12px;
-    background-color: #1A1A2E;
+    background-color: #000000f5;
 
 }
