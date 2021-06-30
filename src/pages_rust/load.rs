@@ -9,8 +9,7 @@ pub struct LoadContext {
     error_code: &'static str,
     page: String,
 
-    title: &'static str,
-    parent: &'static str
+    title: &'static str
 
 }
 

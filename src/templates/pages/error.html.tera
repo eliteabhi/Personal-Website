@@ -1,4 +1,7 @@
-{{#*inline "page"}}
+{% extends "layout" %}
+{% block page %} 
+{{ super() }} 
+
 <link rel="stylesheet" type="text/css" href="css/pages/error.css">
 <div class="section-wrapper">
     <section id="error-body">
@@ -8,5 +11,4 @@
     </section>
 </div>
 
-{{/inline}}
-{{~> (parent)~}}
+{% endblock page %}

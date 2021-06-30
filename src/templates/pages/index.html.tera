@@ -1,4 +1,7 @@
-{{#*inline "page"}}
+{% extends "layout" %}
+{% block page %} 
+{{ super() }} 
+
 <link rel="stylesheet" type="text/css" href="css/pages/index.css">
 <div class="section-wrapper">
     <section id="index-body">
@@ -7,5 +10,4 @@
     </section>
 </div>
 
-{{/inline}}
-{{~> (parent)~}}
+{% endblock page %}

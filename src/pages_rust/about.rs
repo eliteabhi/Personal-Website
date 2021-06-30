@@ -15,8 +15,7 @@ pub struct AboutContext {
     date: &'static str,
     name: &'static str,
 
-    title: &'static str,
-    parent: &'static str
+    title: &'static str
 
 }
 
@@ -28,8 +27,7 @@ pub fn about() -> Template {
         date: "1/21/2001",
         name: "Abhi Rangarajan",
 
-        title: "About",
-        parent: "layout"
+        title: "About"
 
     })
 

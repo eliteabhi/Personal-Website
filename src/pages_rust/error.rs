@@ -9,8 +9,7 @@ pub struct ErrorContext {
     error_code: &'static str,
     page: String,
 
-    title: &'static str,
-    parent: &'static str
+    title: &'static str
 
 }
 
@@ -28,8 +27,21 @@ pub fn not_found(req: &Request) -> Template {
         error_code: "404",
         page: req.uri().to_string(),
 
-        title: "404",
-        parent: "layout"
+        title: "404"
     })
 
 }
+
+#[catch(500)]
+pub fn my_prob(req: &Request) -> Template {
+
+    Template::render("pages/error", &ErrorContext {
+
+        error_code: "500",
+        page: req.uri().to_string(),
+
+        title: "500"
+    })
+
+}
+

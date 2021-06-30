@@ -15,8 +15,7 @@ pub struct IndexContext {
     date: &'static str,
     name: &'static str,
 
-    title: &'static str,
-    parent: &'static str
+    title: &'static str
 
 }
 
@@ -28,8 +27,7 @@ pub fn index() -> Template {
         date: "1/21/2001",
         name: "Abhi Rangarajan",
 
-        title: "Home",
-        parent: "layout"
+        title: "Home"
     })
     
 }

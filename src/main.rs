@@ -25,11 +25,11 @@ fn rocket() -> _ {
                 .attach(Template::fairing())
 
                 //Error catchers on Root
-                .register("/", catchers![error::not_found])
+                .register("/", catchers![error::not_found, error::my_prob])
 
                 //Pages
                 .mount("/", routes![index::index, global_css, error::error_css, index::index_css, about::about_css, load::load_css, favicon]) //Global
-                .mount("/about", routes![about::about]) // About page
+                .mount("/about", routes![about::about, global_css, about::about_css, favicon]) // About page
 
 }
 

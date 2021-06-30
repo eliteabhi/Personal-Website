@@ -1,17 +1,17 @@
 <!doctype html>
-<html>
+<html lang="en">
     <head>
         <link rel="stylesheet" type="text/css" href="css/global.css">
         <title>Abhi Rangarajan - {{title}}</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     </head>
     <body>
-        {{> header}}
+        {% block header %}{% endblock header %}
             <div id="wrapper">
                 <div class="page-content">
-                    {{~> page}}
+                    {% block page %}{% endblock page %}
                 </div>
             </div>
-        {{> footer}}
+        {% block footer %}{% endblock footer%}
     </body>
 </html>
