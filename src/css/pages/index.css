@@ -1,1 +1,14 @@
 @import "../global.css";
+
+:root {
+
+    --base-text-color: #E94560;
+
+}
+
+#index-body {
+
+    text-align: center;
+    color: var(--base-text-color);
+
+}

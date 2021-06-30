@@ -5,6 +5,13 @@
 #E94560 
 */
 
+/* global variables */
+:root {
+
+    --fg-color: #e94560b2;
+    --bg-color:  #0e0e16;
+}
+
 /* Classes */
 
 .section-wrapper {
@@ -48,7 +55,6 @@ p.footer {
 #footer {
 
     text-align: center;
-    border-color: #E94560;
     border-top: 1px solid;
 
 }
@@ -59,9 +65,10 @@ p.footer {
 
 body {
 
-    color: #e94560a6;
+    color: var(--fg-color);
+    border-color: var(--fg-color);
     text-align: left;
     font-size: 12px;
-    background-color: #000000f5;
+    background-color: var(--bg-color);
 
 }
