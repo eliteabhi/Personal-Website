@@ -27,19 +27,19 @@ fn rocket() -> _ {
                 .register("/", catchers![error::not_found])
 
                 //Pages
-                .mount("/", routes![index::index, css, favicon]) //Global (index)
+                .mount("/", routes![index::index, global_css, error::error_css, index::index_css, about::about_css, favicon]) //Global (index page)
                 .mount("/about", routes![about::about]) // About page
 
 }
 
 
 //Helper Functions
-fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
+pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
 
 
 // Global CSS
 #[get("/css/global.css")]
-fn css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/global.css".to_string())) }
+fn global_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/global.css".to_string())) }
 
 
 // Default Favicon
