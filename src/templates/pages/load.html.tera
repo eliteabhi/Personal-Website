@@ -8,10 +8,9 @@
 <link rel="stylesheet" type="text/css" href="css/pages/load.css">
 <div class="section-wrapper">
     <section id="load-body">
-        <h1>Oh no!! you hit a {{test_code}}!</h1>
-        <h3>Please try again another time!</h3>
-        <small>Either I didn't impliment the {{page}} page yet or I messed up some of my code</small>
+       <div style='display: inline'> [user@abhi]$ </div><span id='text'></span><div class='console-bar' id='console' style='display: inline; color: #adadad'>|</div>
     </section>
+    <script src="loading.../Js/load_animation.js"></script>
 </div>
 
 {% endblock page %}
