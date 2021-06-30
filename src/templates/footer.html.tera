@@ -1,9 +1,0 @@
-{% extends "layout" %}
-{% block footer %} 
-{{ super() }} 
-
-<footer id="footer">
-    <p class="footer"> Built with Rust and the Rocket framework.</p>
-</footer>
-
-{% endblock footer %}

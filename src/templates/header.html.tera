@@ -1,9 +1,0 @@
-{% extends "layout" %}
-{% block header %}
-{{ super() }}
-
-<nav>
-    <a href="/">Home</a> | <a href="/about">About</a>
-</nav>
-
-{% endblock header %}

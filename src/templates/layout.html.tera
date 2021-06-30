@@ -5,13 +5,21 @@
         <title>Abhi Rangarajan - {{title}}</title>
         <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico"/>
     </head>
-    <body>
-        {% block header %}{% endblock header %}
+    <body id="full-body">
+        {% block header %}
+        <nav>
+            <a href="/">Home</a> | <a href="/about">About</a>
+        </nav>
+        {% endblock header %}
             <div id="wrapper">
                 <div class="page-content">
                     {% block page %}{% endblock page %}
                 </div>
             </div>
-        {% block footer %}{% endblock footer%}
+        {% block footer %}
+        <footer id="footer">
+            <p class="footer"> Built with Rust and the Rocket framework.</p>
+        </footer>
+        {% endblock footer%}
     </body>
 </html>
