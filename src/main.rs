@@ -6,6 +6,7 @@ mod pages_rust {
     pub mod index;
     pub mod about;
     pub mod error;
+    pub mod load;
 }
 
 use pages_rust::*;
@@ -27,7 +28,7 @@ fn rocket() -> _ {
                 .register("/", catchers![error::not_found])
 
                 //Pages
-                .mount("/", routes![index::index, global_css, error::error_css, index::index_css, about::about_css, favicon]) //Global (index page)
+                .mount("/", routes![index::index, global_css, error::error_css, index::index_css, about::about_css, load::load_css, favicon]) //Global
                 .mount("/about", routes![about::about]) // About page
 
 }

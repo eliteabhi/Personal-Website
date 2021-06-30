@@ -2,12 +2,24 @@
 
 :root {
 
-    --base-text-color: #E94560;
+    --base-text-color: #e94560d7;
 
 }
 
-#index-body {
+.section-wrapper {
 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+
+}
+
+
+#index-body {
+    
     text-align: center;
     color: var(--base-text-color);
 
