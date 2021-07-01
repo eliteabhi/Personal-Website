@@ -8,9 +8,11 @@
 <link rel="stylesheet" type="text/css" href="css/pages/load.css">
 <div class="section-wrapper">
     <section id="load-body"> 
-        <div>╭─user<span id="console-header-color-2" >@</span>abhi <span id="console-header-color-2">in</span> <span style="color: rgb(209, 76, 76)">~</span></div>
-        <div style="position: relative; text-align: left; position: absolute;">
-        ╰─  λ </div>
+        <div id="console-header">
+            <div>╭─user<span id="console-header-color-2" >@</span>abhi <span id="console-header-color-2">in</span> <span style="color: rgb(209, 76, 76)">~</span></div>
+            <div style="position: relative; text-align: left; display: inline">
+            ╰─  λ </div>
+        </div>
         <span id="text"></span><div class="console-bar" id="console" style="display: inline; color: #adadad;">|</div>
     </section>
     <script src="loading.../Js/load_animation.js"></script>

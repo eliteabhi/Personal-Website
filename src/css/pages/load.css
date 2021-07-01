@@ -39,7 +39,7 @@
 
 }
 
-#text:before {
+#text {
 
     text-align: right;
 
@@ -48,5 +48,12 @@
 #console-header-color-2 {
 
     color: rgba(216, 189, 189, 0.842);
+
+}
+
+#console-header {
+
+    margin-right: 0;
+    display: inline
 
 }

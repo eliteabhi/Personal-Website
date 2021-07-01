@@ -4,7 +4,7 @@ consoleText(['Loading...', 'Loading...', 'Loading...', 'Done!'], 'text',['#FE433
 
 function consoleText(words, id, colors) {
 
-var extra_css = " padding-left: 30px;";
+var extra_css = "display: inline";
 
 if (colors === undefined) colors = ['#fff'];
 var visible = true;
