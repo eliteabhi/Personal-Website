@@ -6,7 +6,7 @@
 {{ super() }} 
 
 <link rel="stylesheet" type="text/css" href="css/pages/load.css">
-<div class="section-wrapper">
+<div class="section-wrapper fade-out">
     <section id="load-body"> 
         <div id="console-header">
             <div>╭─user<span id="console-header-color-2" >@</span>abhi <span id="console-header-color-2">in</span> <span style="color: rgb(209, 76, 76)">~</span></div>
