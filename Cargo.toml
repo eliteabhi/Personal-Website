@@ -8,8 +8,10 @@ edition = "2018"
 
 [dependencies]
 rocket = {version = "0.5.0-rc.1", features = ["tls"] }
-serde = {version = "1.0.126", features = ["derive"]}
+serde = {version = "1.0.130", features = ["derive"]}
 image = {version = "0.23.14"}
+chrono = "0.4.19"
+
 
 [dependencies.rocket_dyn_templates]
 version = "0.1.0-rc.1"
