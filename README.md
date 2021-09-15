@@ -17,9 +17,11 @@ This website is currently heavily under work in progress and it will most likely
     - [ ] Possible storage of email credentials for hiring oppertuinities (most likely will be shifted to SQL)
     - [ ] All slugs properly routed
       - [x] 404 not found
-      - [x] main/index
-      - [ ] loading (pre-index)
-      - [x] about
+      - [x] Index
+      - [ ] Loading (pre-index)
+      - [x] About
+      - [ ] Contact Me
+      - [ ] Projects
 - [ ] Frontend
   - [ ] Javascript for fancy animation and other dynamic parts
     - [ ] loading animation
