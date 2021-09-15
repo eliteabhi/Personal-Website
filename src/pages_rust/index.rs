@@ -1,6 +1,7 @@
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
 use std::fs;
+use chrono::{DateTime, Utc, NaiveDate};
 
 //Helper Functions
 pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
@@ -24,7 +25,7 @@ pub fn index() -> Template {
 
     Template::render("pages/index", &IndexContext {
 
-        date: "1/21/2001",
+        date: "Place holder date",
         name: "Abhi Rangarajan",
 
         title: "Home"
