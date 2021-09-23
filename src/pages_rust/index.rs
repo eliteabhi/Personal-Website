@@ -1,7 +1,7 @@
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
 use std::fs;
-use chrono::{DateTime, Utc, NaiveDate};
+use chrono::{Datelike, Utc};
 
 //Helper Functions
 pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
@@ -13,7 +13,7 @@ pub fn index_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_f
 #[derive(serde::Serialize)]
 pub struct IndexContext {
 
-    date: &'static str,
+    date: String,
     name: &'static str,
 
     title: &'static str
@@ -23,9 +23,14 @@ pub struct IndexContext {
 #[get("/")]
 pub fn index() -> Template {
 
+    let now = Utc::now();
+
     Template::render("pages/index", &IndexContext {
 
-        date: "Place holder date",
+        date: format!("{}-{:02}-{:02}",
+            now.year(),
+            now.month(),
+            now.day()),
         name: "Abhi Rangarajan",
 
         title: "Home"
