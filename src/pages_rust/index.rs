@@ -13,7 +13,7 @@ pub fn index_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_f
 #[derive(serde::Serialize)]
 pub struct IndexContext {
 
-    date: &'static str,
+    date: String,
     name: &'static str,
 
     title: &'static str
