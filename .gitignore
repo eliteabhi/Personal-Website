@@ -3,3 +3,5 @@
 .history/
 .git
 Rocket.toml
+Rocket.toml
+.gitignore

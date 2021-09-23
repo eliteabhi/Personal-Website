@@ -2,5 +2,5 @@
 template_dir = "src/templates"
 
 [debug]
-address = "192.168.196.221"
+address = "192.168.196.237"
 port = 8000
