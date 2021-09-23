@@ -27,10 +27,10 @@ pub fn index() -> Template {
 
     Template::render("pages/index", &IndexContext {
 
-        date: format!("{}-{:02}-{:02}",
-            now.year(),
+        date: format!("{:02}-{:02}-{}",
             now.month(),
-            now.day()),
+            now.day(),
+            now.year()),
         name: "Abhi Rangarajan",
 
         title: "Home"
