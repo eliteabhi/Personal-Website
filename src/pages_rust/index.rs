@@ -27,7 +27,7 @@ pub fn index() -> Template {
 
     Template::render("pages/index", &IndexContext {
 
-        date: format!("{:02}-{:02}-{}",
+        date: format!("{:02}/{:02}/{}",
             now.month(),
             now.day(),
             now.year()),
