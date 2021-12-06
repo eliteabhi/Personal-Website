@@ -13,13 +13,13 @@ pub struct LoadContext {
 }
 
 //Helper Functions
-fn read_file(path: String) -> fs::File { return fs::File::open(path).expect("Failed to open file") }
+fn read_file(path: String) -> fs::File { return fs::File::open(path).expect("Failed to open file"); }
 
 #[get("/css/pages/load.css")]
-pub fn load_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/pages/load.css".to_string())) }
+pub fn load_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/pages/load.css".to_string())); }
 
 #[get("/Js/load_animation.js")]
-pub fn load_animation() -> (ContentType, fs::File) { return (ContentType::JavaScript, read_file("src/Js/load_animation.js".to_string()))}
+pub fn load_animation() -> (ContentType, fs::File) { return (ContentType::JavaScript, read_file("Js/load_animation.js".to_string())); }
 
 
 #[get("/")]

@@ -38,14 +38,14 @@ fn rocket() -> _ {
 
 
 //Helper Functions
-pub fn read_file(path: String) -> fs::File { return fs::File::open(path).expect("Failed to open file") }
+pub fn read_file(path: String) -> fs::File { return fs::File::open(path).expect("Failed to open file"); }
 
 
 // Global CSS
 #[get("/css/global.css")]
-fn global_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/global.css".to_string())) }
+fn global_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/global.css".to_string())); }
 
 
 // Default Favicon
 #[get("/images/favicon.ico")]
-fn favicon() -> (ContentType, fs::File) { return (ContentType::Icon, read_file("src/images/favicon.ico".to_string())) }
+fn favicon() -> (ContentType, fs::File) { return (ContentType::Icon, read_file("images/favicon.ico".to_string())); }

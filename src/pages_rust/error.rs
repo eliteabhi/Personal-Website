@@ -14,10 +14,10 @@ pub struct ErrorContext {
 }
 
 //Helper Functions
-fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
+fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file"); }
 
 #[get("/css/pages/error.css")]
-pub fn error_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/pages/error.css".to_string())) }
+pub fn error_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/pages/error.css".to_string())); }
 
 #[catch(404)]
 pub fn not_found(req: &Request) -> Template {

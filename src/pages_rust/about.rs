@@ -3,10 +3,10 @@ use rocket::http::ContentType;
 use std::fs;
 
 //Helper Functions
-pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
+pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file"); }
 
 #[get("/css/pages/about.css")]
-pub fn about_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/pages/about.css".to_string())) }
+pub fn about_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/pages/about.css".to_string())); }
 
 
 #[derive(serde::Serialize)]

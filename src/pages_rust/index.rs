@@ -4,10 +4,10 @@ use std::fs;
 use chrono::{Datelike, Utc};
 
 //Helper Functions
-pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file") }
+pub fn read_file(path: String) -> std::fs::File { return fs::File::open(path).expect("Failed to open file"); }
 
 #[get("/css/pages/index.css")]
-pub fn index_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("src/css/pages/index.css".to_string())) }
+pub fn index_css() -> (ContentType, fs::File) { return (ContentType::CSS, read_file("css/pages/index.css".to_string())); }
 
 
 #[derive(serde::Serialize)]
