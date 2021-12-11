@@ -24,7 +24,7 @@ This website is currently heavily under work in progress and it will most likely
       - [ ] Projects
 - [ ] Frontend
   - [ ] Javascript for fancy animation and other dynamic parts
-    - [ ] loading animation
+    - [x] loading animation
   - [ ] HTML & CSS for website structure
     - [x] Using tera templating agent
     - [ ] Pages
