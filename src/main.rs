@@ -15,7 +15,7 @@ use pages_rust::*;
 use std::fs;
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
-use rusqlite::{Connection, Result};
+use rusqlite::{Connection};
 
 // use rocket::response::Redirect;
 
@@ -24,6 +24,14 @@ use rusqlite::{Connection, Result};
 #[launch]
 fn rocket() -> _ {
  
+    let conn = Connection::open("db/email_form.db").unwrap();
+    conn.execute("CREATE TABLE IF NOT EXISTS emails (
+                    id INTEGER PRIMARY KEY,
+                    name TEXT NOT NULL,
+                    email TEXT NOT NULL,
+                    subject TEXT NOT NULL,
+                    message TEXT NOT NULL
+                )", []).unwrap();
 
     rocket::build()
                 //Fairings
