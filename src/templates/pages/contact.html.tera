@@ -1,0 +1,7 @@
+{% extends "layout" %}
+{% block page %} 
+{{ super() }} 
+ 
+<big>Hello</big>
+
+{% endblock page %}
