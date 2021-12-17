@@ -1,6 +1,7 @@
 #[macro_use] extern crate rocket;
 extern crate rocket_dyn_templates;
 extern crate image;
+extern crate rusqlite;
 
 mod pages_rust {
     pub mod index;
@@ -14,6 +15,7 @@ use pages_rust::*;
 use std::fs;
 use rocket_dyn_templates::Template;
 use rocket::http::ContentType;
+use rusqlite::{Connection, Result};
 
 // use rocket::response::Redirect;
 
@@ -21,6 +23,7 @@ use rocket::http::ContentType;
 // Launch website
 #[launch]
 fn rocket() -> _ {
+ 
 
     rocket::build()
                 //Fairings
