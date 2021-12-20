@@ -1,0 +1,31 @@
+CREATE TABLE person ( //making tables
+
+    person_id int primary key,
+    first_name varchar(30),
+    last_name varchar(30),
+    email_id varchar(150),
+    subject varchar(150),
+    message text
+
+    );
+
+CREATE TABLE person_cookies ( //attaching related/foreign keys
+
+    cookie_id INTEGER PRIMARY KEY,
+    cookie_info text,
+    person_id INTEGER,
+    FOREIGN KEY(person_id) REFERENCES person(person_id)
+
+    );
+
+//inserting data
+.mode insert new_table
+INSERT INTO "new_table" VALUES('hello',10);
+INSERT INTO "new_table" VALUES('goodbye',20);
+
+//selecting with certain value
+SELECT coloumns FROM table_name WHERE coloumn_name=value
+
+//updating data
+UPDATE table_name SET coloumn_name=value WHERE coloumn_name=value
+
