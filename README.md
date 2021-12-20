@@ -8,19 +8,24 @@ This website is currently heavily under work in progress and it will most likely
 
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-## Task list (as of Sept. 15, 2021)
-
+## Task list (as of December 20, 2021)
+- [ ] Backend/Server-End
+  - [x] Create User_Data Database
+    - [ ] Create Email_Data Table
+  - [ ] Create User_Cookies Database
+    - [ ] Create Cookies for authentication
+    - [ ] Create Cookies for session
+    - [ ] Create Cookies for any save states
 - [ ] Boilerplate
   - [ ] Rust backend for slug routing
     - [x] Modular pages (each with their own rs file)
     - [ ] Dynamically updating date on main page (not sure if only JS will be used or if it's with rust for date)
-    - [ ] Possible storage of email credentials for hiring oppertuinities (most likely will be shifted to SQL)
     - [ ] All slugs properly routed
       - [x] 404 not found
       - [x] Index
       - [ ] Loading (pre-index)
       - [x] About
-      - [ ] Contact Me
+      - [x] Contact Me
       - [ ] Projects
 - [ ] Frontend
   - [ ] Javascript for fancy animation and other dynamic parts
@@ -38,4 +43,4 @@ This website is currently heavily under work in progress and it will most likely
       
 - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 
-### This is fully up to date as of Sept. 15, 2021
+### This is fully up to date as of Dec. 20, 2021
