@@ -5,7 +5,7 @@
 
 ## Notice:
 
-###CURRENTLY REDOING ENTIRE DEVELOPMENT STACK SO NONE OF THE CHECK MARKS ARE RELEVAENT
+## **CURRENTLY REDOING ENTIRE DEVELOPMENT STACK SO NONE OF THE CHECK MARKS ARE RELEVAENT**
 
 This website is currently heavily under work in progress and it will most likely stay that way for a while, due to being a college student. Please take the code and the look of the website with a pinch of salt, if you don't mind.
 
